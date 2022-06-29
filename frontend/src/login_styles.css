@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto-Bold.woff") format("woff");
+}
+
+.loginContainer {
+  color: white;
+}
+
+.loginContainer h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginContainer .login {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 5%;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.loginContainer .login .lable {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.loginContainer .accountButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=login_styles.css.map */

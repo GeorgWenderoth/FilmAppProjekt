@@ -1,0 +1,28 @@
+@import "mixins";
+@import "font";
+
+
+.loginContainer{
+  color: white;
+
+
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+
+  .login{
+    display: grid;
+    grid-column-gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+
+    .lable{
+      justify-self: end;
+    }
+  }
+
+  .accountButton{
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,188 @@
+@import "mixins";
+@import "font";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #3556AD;
+  //height: 75px;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1rem; //43px;
+
+  /*@include xl {
+      font-size: 19px;
+      flex-direction: column;
+  } */
+
+  color: white;
+
+  // @media only screen and (max-width: 800px) {font-size: 12pt!important;}
+
+
+
+  .linksUndsucheContainer {
+
+    @include sxl {
+      display: flex;
+      align-items: center;
+    }
+
+    @include xl {
+      display: flex;
+      align-items: center;
+    }
+
+    @include md {
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .links {
+      padding-left: 55px;
+
+      @include md {
+        flex-direction: column;
+        display: flex;
+      }
+
+      a {
+        //text-decoration: underline;
+        color: rgba(255, 255, 255, .5); //#cbbde2; // rgba(0,0,0,.5); //white;
+        border-bottom: 0px solid;
+        padding: 8px;
+
+        font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      #markierterLink {
+        color: white; //black;
+      }
+    }
+
+    .sucheContainer {
+      padding-right: 100px;
+      margin-left: auto;
+
+      @include md {
+        margin-left: 55px;
+      }
+
+
+      .suche {
+        border: white;
+        border-radius: .25rem; //10px;
+        font-size: 1rem; //33px;
+        padding: .375rem .75rem; //new
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .buttonActive {
+    display: flex;
+  }
+
+
+  button.menuButton {
+    display: none;
+    @include md{
+      // position: relative; right: -500px;
+      margin-left: auto;
+      margin-right: 2rem;
+      display: flex;
+      // align-items: center;
+
+
+    }
+  }
+
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picStyle {
+  width: 350px;
+  border: 2px solid white;
+  margin-bottom: 12px;
+  margin-top: 6%;
+}
+
+.picStar {
+  width: 10%;
+}
+
+.writingStyle {
+  text-align: center;
+}
+
+.sterne {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.detailsContainer {
+  color: white;
+  background-color: black;
+  display: grid;
+  grid-column-gap: 100px;
+  grid-template-columns: repeat(2, 1fr); // vorher 3 aber es solten 2 sein und ins zweite cast
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.text {
+  font-size: 30px;
+}
+
+.ueberschrift {
+  font-size: 50px;
+}
+
+.anbieter {
+  font-size: 50px;
+}
+
+.details {
+  font-size: 20px;
+}
+
+.details li{
+  /* line-height: 2rem;*/
+  padding-bottom: 9px;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.picStyleText {
+  height: 100%;
+}
+
+

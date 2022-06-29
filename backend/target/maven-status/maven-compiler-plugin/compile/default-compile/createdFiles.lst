@@ -1,0 +1,13 @@
+de/adorsys/filmappbackend/domain/MovieOrTvElement.class
+de/adorsys/filmappbackend/ElementSchonVorhanden.class
+de/adorsys/filmappbackend/GeneratedValue.class
+de/adorsys/filmappbackend/services/FilmService.class
+de/adorsys/filmappbackend/rest/MovieOrTvController.class
+de/adorsys/filmappbackend/exception/ExceptionHandlerAdvice.class
+de/adorsys/filmappbackend/exception/ElementNichtVorhanden.class
+de/adorsys/filmappbackend/repository/MovieOrTvRepository.class
+de/adorsys/filmappbackend/exception/UngueltigeBewertung.class
+de/adorsys/filmappbackend/Id.class
+de/adorsys/filmappbackend/RunWith.class
+de/adorsys/filmappbackend/domain/ApiSucheElementRequest.class
+de/adorsys/filmappbackend/FilmappbackendApplication.class

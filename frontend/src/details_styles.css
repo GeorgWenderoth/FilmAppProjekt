@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto-Bold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #3556AD;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  /*@include xl {
+      font-size: 19px;
+      flex-direction: column;
+  } */
+  color: white;
+}
+
+@media (min-width: 1201px) {
+  .header .linksUndsucheContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header .linksUndsucheContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .linksUndsucheContainer {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+.header .linksUndsucheContainer .links {
+  padding-left: 55px;
+}
+
+@media (max-width: 768px) {
+  .header .linksUndsucheContainer .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .linksUndsucheContainer .links a {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0px solid;
+  padding: 8px;
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header .linksUndsucheContainer .links #markierterLink {
+  color: white;
+}
+
+.header .linksUndsucheContainer .sucheContainer {
+  padding-right: 100px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .header .linksUndsucheContainer .sucheContainer {
+    margin-left: 55px;
+  }
+}
+
+.header .linksUndsucheContainer .sucheContainer .suche {
+  border: white;
+  border-radius: .25rem;
+  font-size: 1rem;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+}
+
+.header .buttonActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header button.menuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header button.menuButton {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.picStyle {
+  width: 350px;
+  border: 2px solid white;
+  margin-bottom: 12px;
+  margin-top: 6%;
+}
+
+.picStar {
+  width: 10%;
+}
+
+.writingStyle {
+  text-align: center;
+}
+
+.sterne {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.film {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.detailsContainer {
+  color: white;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 100px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.text {
+  font-size: 30px;
+}
+
+.ueberschrift {
+  font-size: 50px;
+}
+
+.anbieter {
+  font-size: 50px;
+}
+
+.details {
+  font-size: 20px;
+}
+
+.details li {
+  /* line-height: 2rem;*/
+  padding-bottom: 9px;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.picStyleText {
+  height: 100%;
+}
+/*# sourceMappingURL=details_styles.css.map */
