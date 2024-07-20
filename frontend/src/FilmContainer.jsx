@@ -23,10 +23,8 @@ export class FilmContainer extends React.Component {
         axios({
             method: "get",
             url: 'http://localhost:8080/api/test/user/element' + '?title=' + this.props.nameOrTitle + '&year=' + this.props.erscheinungsJahr,
-
-                headers:{ Authorization: 'Bearer ' +document.cookie}
-
-
+            headers:{ Authorization: 'Bearer ' +document.cookie}
+            
         }).then(response => {
             console.log(response.data.bewertungsWert);
                 this.setState({bewertung: response.data.bewertungsWert})
@@ -43,7 +41,7 @@ export class FilmContainer extends React.Component {
             )
         }
         return (
-
+            
             <>
                 <div className="film">
                     <Link to={"/detail?id=" + this.props.id + "&movieOrTv=" + this.props.movieOrTv}>
@@ -79,7 +77,6 @@ export class FilmContainer extends React.Component {
                                                                exDataId: this.props.id,
                                                                name: this.props.nameOrTitle,
                                                                erscheinungsJahr: this.props.erscheinungsJahr,
-
                                                            }
                                                        })
                                                        this.setState({bewertung: i, vorhandenOderNicht: true})
@@ -101,14 +98,12 @@ export class FilmContainer extends React.Component {
                                                        axios({
                                                            method: 'post',
                                                            url: 'http://127.0.0.1:8080/api/test/user/element', headers:{ Authorization: 'Bearer ' +document.cookie},
-
                                                            data: {
                                                                id: 0,
                                                                bewertungsWert: i,
                                                                exDataId: this.props.id,
                                                                name: this.props.nameOrTitle,
                                                                erscheinungsJahr: this.props.erscheinungsJahr,
-
                                                            }
                                                        })
                                                    }
