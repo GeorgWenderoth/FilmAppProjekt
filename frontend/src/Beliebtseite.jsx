@@ -21,17 +21,15 @@ export class Beliebtseite extends React.Component {
             let filmInformationen = [];
             var results = response.data.results;
             for (var i = 0; i < results.length; i++) {
-                var imagepath =
-                    "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
-
-
+                
+                var imagepath = "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
                 var ungeteilteBewertung = results[i].vote_average;
                 var bewertung = Math.round(ungeteilteBewertung / 2);
                 var movieOrTv = "movie";
                 var nameOrTitle = results[i].original_title;
                 var erscheinungsJahr = results[i].release_date;
-
                 var id = results[i].id;
+                
                 filmInformationen.push({
                     nameOrTitle,
                     imagepath,
@@ -40,7 +38,6 @@ export class Beliebtseite extends React.Component {
                     movieOrTv,
                     erscheinungsJahr
                 })
-
             }
             this.setState({
                 filmContainer: filmInformationen
