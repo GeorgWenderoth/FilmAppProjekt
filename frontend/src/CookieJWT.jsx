@@ -10,7 +10,7 @@ export  class CookieJWT extends React.Component {
         this.call();
     }
 
-    call (){
+    call(){
         axios.get("http://localhost:8080/api/test/user", {headers:{ Authorization: "Bearer" + document.cookie}})
             .then(response => {
                 console.log("backend: ", response.data);
