@@ -22,17 +22,6 @@ import {CookieJWT} from "./CookieJWT";
 
 const App = () => {
 
-  /* axios.get("http://localhost:8080/api/test/user", {headers:{ 'Authorization': "Bearer" + jwtToken
-
-       }
-   )
-   <Route path={"/beliebt"}>
-                    <Beliebtseite/>
-                </Route>
-
-   */
-
-
 
     return (
         <Router history={history}>
@@ -51,7 +40,7 @@ const App = () => {
                     <Serienseite/>
                 </Route>
                 <PrivateRoute path='/beliebt' component={Beliebtseite}/>
-
+      
                 <Route path={"/suche"} >
                     <Sucheseite/>
                 </Route>
