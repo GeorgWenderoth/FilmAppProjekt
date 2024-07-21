@@ -1,17 +1,12 @@
 package de.adorsys.filmappbackend.services;
 
-/*Authentication authentication =
-    authenticationManager.authentication */
-
 import de.adorsys.filmappbackend.domain.UserElement;
 import de.adorsys.filmappbackend.repository.UserRepository;
 import net.minidev.json.annotate.JsonIgnore;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-
 import javax.transaction.Transactional;
 import java.util.Collection;
 import java.util.List;
@@ -102,6 +97,6 @@ public class UserDetailsImpl implements UserDetails {
         if(o == null || getClass() != o.getClass())
             return false;
         UserDetailsImpl user = (UserDetailsImpl) o;
-        return  Objects.equals(id, user.id); // mit email machen?
+        return  Objects.equals(id, user.id); 
     }
 }
