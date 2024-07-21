@@ -4,7 +4,6 @@ import history from "./history";
 import './styles.scss';
 import './login_styles.scss';
 
-
 export class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -34,10 +33,6 @@ export class Login extends React.Component {
                     state: {value: "this.state.value"}
                 });
                 window.location.reload(false);
-
-                console.log("Response: " + response.data.accessToken);
-                console.log("Then Worked");
-
             }
         });
     }
@@ -55,19 +50,15 @@ export class Login extends React.Component {
             }
         }).then(response => {
             this.setState({message: response.data.message});
-           console.log(response.data);
         })
-
     }
 
     handleUsernameChange = (event) =>{
         this.setState({username: event.target.value});
     }
 
-
-
     handleChange = (event) => {
-        this.setState({mail: event.target.value}); //Wird Probleme geben
+        this.setState({mail: event.target.value}); 
     }
 
     handlePasswordChange = (event) => {
@@ -79,23 +70,23 @@ export class Login extends React.Component {
         return (
             <div className="loginContainer">
                 <h1>Login</h1>
-            <div className="login">
-                <label className="lable">
-                    username
-                </label>
-                <input type="text" value={this.state.username} onChange={this.handleUsernameChange}/>
-                <label className="lable">
-                    Passwort
-                </label>
-                <input type="password" value={this.state.passwort}
-                       onChange={this.handlePasswordChange}/>
-                <label className="lable">
-                    E-mail
-                </label>
-                <input type="text" value={this.state.mail}
-                onChange={this.handleChange}/>
-                <input type="text" value={this.state.message}/>
-            </div>
+                <div className="login">
+                    <label className="lable">
+                        username
+                    </label>
+                    <input type="text" value={this.state.username} onChange={this.handleUsernameChange}/>
+                    <label className="lable">
+                        Passwort
+                    </label>
+                    <input type="password" value={this.state.passwort}
+                           onChange={this.handlePasswordChange}/>
+                    <label className="lable">
+                        E-mail
+                    </label>
+                    <input type="text" value={this.state.mail}
+                           onChange={this.handleChange}/>
+                    <input type="text" value={this.state.message}/>
+                </div>
 
                 <button onClick={this.handleSubmit}>
                     Login
@@ -103,7 +94,7 @@ export class Login extends React.Component {
                 <button onClick={this.handleNewAccount} className="accountButton">
                     Neuen Account erstellen
                 </button>
-            </div>
+        </div>
         )
     }
 }
