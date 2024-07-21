@@ -16,7 +16,6 @@ export class Login extends React.Component {
     }
 
     handleSubmit = () => {
-        console.log("Submit " + this.state.mail + this.state.passwort);
         axios({
             method: "post",
             url: "http://127.0.0.1:8080/api/auth/signin",
