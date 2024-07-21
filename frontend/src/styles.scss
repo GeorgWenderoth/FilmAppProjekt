@@ -13,24 +13,14 @@ a {
 
 .header {
     background-color: #3556AD;
-    //height: 75px;
     width: 100%;
     padding: .5rem 1rem;
-    font-size: 1rem; //43px; 
-
-    /*@include xl {
-        font-size: 19px;
-        flex-direction: column;
-    } */
-
+    font-size: 1rem;
     color: white;
 
-    // @media only screen and (max-width: 800px) {font-size: 12pt!important;}
-
-
-
+    
     .linksUndsucheContainer {
-
+        
         @include sxl {
             display: flex;
         align-items: center;
@@ -56,16 +46,14 @@ a {
             }
 
             a {
-                //text-decoration: underline;
-                color: rgba(255, 255, 255, .5); //#cbbde2; // rgba(0,0,0,.5); //white;
+                color: rgba(255, 255, 255, .5);
                 border-bottom: 0px solid;
                 padding: 8px;
-
                 font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
             }
 
             .markierterLink {
-                color: white; //black; 
+                color: white;
             }
         }
 
@@ -77,12 +65,11 @@ a {
                 margin-left: 55px;
             }
 
-
             .suche {
                 border: white;
-                border-radius: .25rem; //10px;
-                font-size: 1rem; //33px;
-                padding: .375rem .75rem; //new
+                border-radius: .25rem;
+                font-size: 1rem;
+                padding: .375rem .75rem;
                 line-height: 1.5;
             }
         }
@@ -92,23 +79,16 @@ a {
         display: flex;
     }
 
-     
     button.menuButton {
         display: none;
-   @include md{
-           // position: relative; right: -500px; 
-           margin-left: auto;
-           margin-right: 2rem;
-           display: flex;
-       // align-items: center;
-       
-
-            }
+        
+        @include md {
+            margin-left: auto;
+            margin-right: 2rem;
+            display: flex;
         }
-    
+    }
 }
-
-
 
 
 .container {
@@ -179,15 +159,5 @@ a {
 .detailsContainer {
     display: flex;
     height: calc(100vh - 75px);
-    /* auskommentiert? */
     align-items: center;
 }
-
-/*@media only screen and (max-width: 800px) { 
-    .header{
-        font-size: 12pt!important;
-    }
-    .suche{
-        font-size: 10pt;
-    }
-}*/
