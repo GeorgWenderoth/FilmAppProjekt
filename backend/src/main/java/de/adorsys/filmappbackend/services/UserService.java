@@ -6,6 +6,7 @@ import de.adorsys.filmappbackend.exception.ElementNichtVorhanden;
 import de.adorsys.filmappbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+@Deprecated
 @org.springframework.stereotype.Service
 public class UserService {
 
