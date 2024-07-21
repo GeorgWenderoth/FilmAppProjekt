@@ -29,7 +29,7 @@ export class Sucheseite extends React.Component {
                 const movieOrTv = results[i].media_type;
                 const erscheinungsJahr = results[i].release_date;
                 const id = results[i].id;
-                const nameOrTitle;
+                let nameOrTitle;
                 switch (movieOrTv) {
                     case "tv":
                         nameOrTitle = name;
