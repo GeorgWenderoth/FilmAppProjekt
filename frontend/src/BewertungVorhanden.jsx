@@ -38,5 +38,4 @@ class BewertungVorhanden extends React.Component {
             </>
         )
     };
-
 }
