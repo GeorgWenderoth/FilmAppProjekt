@@ -19,7 +19,6 @@ export class FilmContainer extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Cookie: " +document.cookie);
         axios({
             method: "get",
             url: 'http://localhost:8080/api/test/user/element' + '?title=' + this.props.nameOrTitle + '&year=' + this.props.erscheinungsJahr,
