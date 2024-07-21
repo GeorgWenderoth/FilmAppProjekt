@@ -22,14 +22,14 @@ export class Sucheseite extends React.Component {
             var results = response.data.results;
             let filmInformationen = [];
             for (var i = 0; i < results.length; i++) {
-                var imagepath = "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
-                var name = results[i].original_name;
-                var titel = results[i].original_title;
-                var bewertung = results[i].vote_average;
-                var movieOrTv = results[i].media_type;
-                var erscheinungsJahr = results[i].release_date;
-                var id = results[i].id;
-                var nameOrTitle;
+                const imagepath = "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
+                const name = results[i].original_name;
+                const titel = results[i].original_title;
+                const bewertung = results[i].vote_average;
+                const movieOrTv = results[i].media_type;
+                const erscheinungsJahr = results[i].release_date;
+                const id = results[i].id;
+                const nameOrTitle;
                 switch (movieOrTv) {
                     case "tv":
                         nameOrTitle = name;
@@ -49,8 +49,8 @@ export class Sucheseite extends React.Component {
             }
             this.setState({filmContainer: filmInformationen});
         });
-
     }
+    
     render = () => {
         return (
             <>
