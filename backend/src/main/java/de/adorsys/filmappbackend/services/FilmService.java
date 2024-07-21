@@ -1,15 +1,11 @@
 package de.adorsys.filmappbackend.services;
+
 import de.adorsys.filmappbackend.ElementSchonVorhanden;
 import de.adorsys.filmappbackend.repository.MovieOrTvRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
-
 import de.adorsys.filmappbackend.domain.MovieOrTvElement;
 import de.adorsys.filmappbackend.exception.ElementNichtVorhanden;
 import de.adorsys.filmappbackend.exception.UngueltigeBewertung;
-
-
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,9 +15,7 @@ public class FilmService {
     @Autowired
    private MovieOrTvRepository repository;
 
-    //public List<MovieOrTvElement> elementeList = new ArrayList<>();
-
-    public FilmService() { // was ist das? warum bruachen wir das
+    public FilmService() { 
     }
 
     public List<MovieOrTvElement> getElementeList(){
@@ -33,24 +27,15 @@ public class FilmService {
         System.out.println("gerundeteBewerung: " + gerundeteBewertung);
         if (gerundeteBewertung > 5) {
             throw new UngueltigeBewertung("Bewertung darf nicht größer als 5 sein!");
-
         }
 
        try{
         sucheElement(element.getName(),element.getErscheinungsJahr());
             throw new ElementSchonVorhanden("Element schon vorhanden");
-
+           
         }catch (ElementNichtVorhanden e){
            return repository.save(element);
-
         }
-       /* String parsedRating = String.valueOf(gerundeteBewertung); // ist derzeit deutlich einfacher
-        // und unkomplizierter als datentypen zu ändern
-        MovieOrTvElement element2 = veraendereElementBewertung(element.getName(),element.getErscheinungsJahr(), parsedRating);
-        System.out.println("element2.bewertung: " + element2.getBewertungsWert());
-        return repository.save(element2);
-*/
-
     }
 
     public MovieOrTvElement sucheElement(String name, LocalDate erscheinungsJahr) {
@@ -77,9 +62,4 @@ public class FilmService {
         MovieOrTvElement element = sucheElement(name, erscheinungsJahr);
         repository.delete(element);
     }
-
-
-
 }
-
-
