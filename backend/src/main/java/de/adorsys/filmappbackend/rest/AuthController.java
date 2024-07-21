@@ -1,6 +1,5 @@
 package de.adorsys.filmappbackend.rest;
 
-
 import de.adorsys.filmappbackend.Security.jwt.JwtUtils;
 import de.adorsys.filmappbackend.domain.ERole;
 import de.adorsys.filmappbackend.domain.Role;
@@ -12,7 +11,6 @@ import de.adorsys.filmappbackend.request.LoginRequest;
 import de.adorsys.filmappbackend.request.SignupRequest;
 import de.adorsys.filmappbackend.response.JwtResponse;
 import de.adorsys.filmappbackend.response.MessageResponse;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,9 +27,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@CrossOrigin //(origins = "+", maxAge = 3600) // was ist das
-
-
+@CrossOrigin 
 @RestController
 @RequestMapping("api/auth")
 public class AuthController {
@@ -120,8 +116,7 @@ public class AuthController {
         }
         user.setRoles(roles);
         userRepository.save(user);
+        
         return ResponseEntity.ok(new MessageResponse("User registered succsessfully!"));
-
-
     }
 }
