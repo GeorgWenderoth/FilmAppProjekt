@@ -11,7 +11,6 @@ export class Startseite extends React.Component {
             filmContainer: []
         };
     }
-
     
     componentDidMount = () => {
         axios({
@@ -20,17 +19,16 @@ export class Startseite extends React.Component {
                 "https://api.themoviedb.org/3/trending/all/day?api_key=f73409a3f2d4b75bd0d49e840b299fc8",
         }).then(response => {
             let filmInformationen = [];
-            var results = response.data.results;
+            const results = response.data.results;
             for (var i = 0; i < results.length; i++) {
-                var imagepath =
-                    "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
-                var name = results[i].original_name;
-                var titel = results[i].original_title;
-                var ungeteilteBewertung = results[i].vote_average;
-                var bewertung = Math.round(ungeteilteBewertung / 2);
-                var movieOrTv = results[i].media_type;
-                var nameOrTitle;
-                var erscheinungsJahr;
+                const imagepath = "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
+                const name = results[i].original_name;
+                const titel = results[i].original_title;
+                const ungeteilteBewertung = results[i].vote_average;
+                const bewertung = Math.round(ungeteilteBewertung / 2);
+                const movieOrTv = results[i].media_type;
+                let nameOrTitle;
+                let erscheinungsJahr;
                 switch (movieOrTv) {
                     case "tv":
                         nameOrTitle = name;
@@ -41,7 +39,7 @@ export class Startseite extends React.Component {
                         erscheinungsJahr = results[i].release_date;
                         break;
                 }
-                var id = results[i].id;
+                const id = results[i].id;
                 filmInformationen.push({
                     nameOrTitle,
                     imagepath,
@@ -50,7 +48,6 @@ export class Startseite extends React.Component {
                     movieOrTv,
                     erscheinungsJahr
                 })
-
             }
             this.setState({
                 filmContainer: filmInformationen
