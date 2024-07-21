@@ -14,7 +14,7 @@ import io.jsonwebtoken.*;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${adorsys.app.jwtSecret}") //Was mus da bei mir rein
+    @Value("${adorsys.app.jwtSecret}") 
     private String jwtSecret;
 
     @Value("${adorsys.app.jwtExpirationMs}")
