@@ -9,7 +9,7 @@ import grau from './images/stern_grau.svg';
 
     render() {
         return (
-            <img className="picStar" id={this.props.id} onClick={this.props.click} alt="*" src={this.props.farbe} /* src={"./dist/stern_" + this.props.farbe +".svg"} */ />
+            <img className="picStar" id={this.props.id} onClick={this.props.click} alt="*" src={this.props.farbe}/>
         )
     }
  }
