@@ -19,7 +19,7 @@ export class Sucheseite extends React.Component {
             url: 'https://api.themoviedb.org/3/search/multi?api_key=f73409a3f2d4b75bd0d49e840b299fc8&language=en-US&query='
                 + suchParameter + '&page=1&include_adult=false',
         }).then(response => {
-            var results = response.data.results;
+            const results = response.data.results;
             let filmInformationen = [];
             for (var i = 0; i < results.length; i++) {
                 const imagepath = "https://image.tmdb.org/t/p/w1280" + results[i].poster_path;
