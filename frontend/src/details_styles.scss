@@ -13,21 +13,11 @@ a {
 
 .header {
   background-color: #3556AD;
-  //height: 75px;
   width: 100%;
   padding: .5rem 1rem;
-  font-size: 1rem; //43px;
-
-  /*@include xl {
-      font-size: 19px;
-      flex-direction: column;
-  } */
-
+  font-size: 1rem; 
   color: white;
-
-  // @media only screen and (max-width: 800px) {font-size: 12pt!important;}
-
-
+  
 
   .linksUndsucheContainer {
 
@@ -56,16 +46,14 @@ a {
       }
 
       a {
-        //text-decoration: underline;
-        color: rgba(255, 255, 255, .5); //#cbbde2; // rgba(0,0,0,.5); //white;
+        color: rgba(255, 255, 255, .5); 
         border-bottom: 0px solid;
         padding: 8px;
-
         font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
       }
 
       #markierterLink {
-        color: white; //black;
+        color: white; 
       }
     }
 
@@ -77,12 +65,11 @@ a {
         margin-left: 55px;
       }
 
-
       .suche {
         border: white;
-        border-radius: .25rem; //10px;
-        font-size: 1rem; //33px;
-        padding: .375rem .75rem; //new
+        border-radius: .25rem; 
+        font-size: 1rem; 
+        padding: .375rem .75rem; 
         line-height: 1.5;
       }
     }
@@ -95,17 +82,13 @@ a {
 
   button.menuButton {
     display: none;
+    
     @include md{
-      // position: relative; right: -500px;
       margin-left: auto;
       margin-right: 2rem;
       display: flex;
-      // align-items: center;
-
-
     }
   }
-
 }
 
 
@@ -149,7 +132,7 @@ a {
   background-color: black;
   display: grid;
   grid-column-gap: 100px;
-  grid-template-columns: repeat(2, 1fr); // vorher 3 aber es solten 2 sein und ins zweite cast
+  grid-template-columns: repeat(2, 1fr); 
   padding-right: 10%;
   padding-left: 10%;
   padding-top: 5%;
@@ -184,5 +167,3 @@ a {
 .picStyleText {
   height: 100%;
 }
-
-
